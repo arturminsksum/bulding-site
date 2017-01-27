@@ -297,6 +297,7 @@
     background-color: rgb(255, 255, 255);
     font-size: 20px;
     padding: 0 70px 0 30px;
+    appearance: none;
 
     @include media(1199) {
       width: 470px;
@@ -446,11 +447,11 @@
     }
 
     @include media(1199) {
-      padding: 13px 35px;
+      padding: 14px 33px;
     }
 
     @include media(767) {
-      padding: 13px 12px;
+      padding: 14px 12px;
     }
 
   }

@@ -291,6 +291,7 @@
 	color: $dark-grey;
 	font-size: 14px;
 	margin: 0 0 30px 0;
+	appearance: none;
 
 	&.err {
 		border-color: $pink;
@@ -429,7 +430,7 @@
 	}
 
 	@include media(767) {
-		width: 270px;
+		width: 100%;
 		padding: 30px 20px 20px;
 
 		&__title {

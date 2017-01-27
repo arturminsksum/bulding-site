@@ -66,12 +66,17 @@
 
     .row {
       display: flex;
+      align-content: center;
+    }
+    .columns {
+      position: relative;
     }
 
     .watch {
-      position: relative;
+      position: absolute;
       padding: 30px;
       height: 100%;
+      width: 100%;
       padding-bottom: 60px;
 
       &__btn {
@@ -89,6 +94,7 @@
       }
 
       .watch {
+        position: relative;
         padding: 30px 20px;
         height: inherit;
 

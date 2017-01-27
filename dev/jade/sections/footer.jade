@@ -75,10 +75,10 @@ mixin footer(o)
             label.label(for="email_feed") E-mail*
           .form__block.form__block_radio
             input#radio_call.radio__hide(type='radio', name='choose', value='call', checked)
-            label.radio(for='radio_call') Заказать звонок
+            label.radio.js-radio-call(for='radio_call') Заказать звонок
             br
             input#radio_ask.radio__hide(type='radio', name='choose', value='ask')
-            label.radio(for='radio_ask') Задать вопрос из формы
+            label.radio.js-radio-ask(for='radio_ask') Задать вопрос из формы
           .form__block.form__block_text
             textarea.textarea#message_feed(name='form[]', rows='5', placeholder='', disabled)
           .form__btn
