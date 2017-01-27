@@ -1,0 +1,20 @@
+
+
+mixin sidebar(page, type)
+  - var side = {'Окна':['"Холодный" профиль', '"Теплый" профиль'],'Раздвижные двери':['Раздвижные двери', 'Подъемно раздвижные двери','Параллельно-отставные раздвижные откидные двери (двери PASK)'],'Зимние сады и террасы':['Террасы'],'Вентилируемый фасад':['Панели фасадные', 'Керамогранит', 'Натуральный камень','Подконструкция']}
+
+  aside.sidebar(class=type?'sidebar_' + type:'')
+    .overlay.overlay_sidebar
+    
+    .sidebar__btn.js-sidebar-open=page
+    .sidebar__menu
+      .side-menu__close.js-sidebar-close
+      ul.side-menu
+        - each value, type in side
+          li.side-menu__item.opened
+            .side-menu__arr.js-sidebar-arr
+            a(href="").side-menu__link=type
+            ul.side-submenu(style="display:block")
+              - each sub in value
+                li.side-submenu__item
+                  a(href="").side-submenu__link=sub

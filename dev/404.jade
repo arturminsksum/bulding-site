@@ -1,0 +1,23 @@
+extends template
+block content
+  main
+    .container
+      +breadcrumb(['Ошибка 404'])
+    .b-content
+      .container
+        section
+          .page__title Ошибка 404
+          .p-error
+            .p-error__title Страница не найдена 
+            .p-error__text 
+              p К сожалению, запрашиваемая Вами страница не найдена. Вы можете перейти на 
+                a(href="/") главную
+                |  страницу или воспользоваться формой поиска по сайту, расположенной в верхнем меню.
+            .p-error__img
+              img(src="img/404.jpg", alt="")
+
+
+    +b-contacts()
+
+    +b-map()
+      

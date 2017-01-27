@@ -1,0 +1,38 @@
+//- include number
+
+mixin b-contacts()
+  section.b-contacts
+    .container
+      .b-contacts__title Контакты
+      .b-contacts__row
+          .b-contacts__col.b-contacts__numbers
+            .phone
+              a(href="tel:+375172475003").phone__number
+                  span.phone__code + 375 17 
+                  span.phone__num 247 50 03         
+            .phone           
+              a(href="tel:+375172475003").phone__number
+                  span.phone__code + 375 17 
+                  span.phone__num 247 50 03    
+            .mail
+              span.mail__title E-mail: 
+              a.mail__adr(href="mailto:info@f-b.by") info@f-b.by
+          .b-contacts__col.b-contacts__adress                      
+              .adress г. Минск, <br>ул. Сурганова, 61 офис 27-7, БЦ "Zebra"
+          .b-contacts__col.b-contacts__worktime
+              .worktime
+                .worktime__title Режим работы:
+                .worktime__week
+                  .worktime__day
+                  .worktime__day
+                  .worktime__day
+                  .worktime__day
+                  .worktime__day
+                  .worktime__day.off        
+                  .worktime__day.off
+                .worktime__time 9.00 - 18.00  
+
+mixin b-map()
+  section.b-map
+    #map.b-map__map
+    a.b-map__btn.js-popup(href="#feed") Связаться с нами

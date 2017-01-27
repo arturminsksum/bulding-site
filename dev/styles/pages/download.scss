@@ -1,0 +1,135 @@
+.accordion {
+  width: 100%;
+
+  .item {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: $border;
+    border-width: 1px;
+    margin-bottom: 30px;
+
+    &.opened {
+      .item__title {
+        color: #fff;
+        background-color: $mad-blue;
+
+        &:after {
+          background-image: $accord-arrow-up;
+          width: 10px;
+          height: 10px;
+        }
+
+      }
+
+      .item__info {
+      }
+
+    }
+
+    &__title {
+      position: relative;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 500;
+      padding: 15px 50px 15px 20px;
+      cursor: pointer;
+      background-color: #ededed;
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-image: $accord-arrow-down;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: 20px;
+        top: 23px;
+      }
+
+    }
+
+    &__info {
+      display: none;
+      position: relative;
+      padding: 50px 30px;
+    }
+
+  }
+
+  @include media(1199) {
+    .item {
+      &__info {
+        padding: 30px 20px;
+      }
+
+      &__title {
+        font-size: 16px;
+
+        &:after {
+          top: 20px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.document {
+  position: relative;
+
+  &__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+    }
+
+  }
+
+  &__right {
+    padding-left: 90px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: $dark-grey;
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: 700;
+    @include hover;
+  }
+
+  @include media(767) {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &__left {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    &__right {
+      padding-left: 0;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}

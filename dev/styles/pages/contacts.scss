@@ -1,0 +1,112 @@
+.contacts {
+  &__inner {
+    border-top: 1px solid $border-bottom;
+    padding: 50px 0;
+  }
+
+  &__svg {
+    display: none;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    padding: 0 30px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-grey;
+    line-height: 1.7;
+  }
+
+  &__mail {
+    color: $light-blue;
+    text-decoration: underline;
+  }
+
+  &__phone {
+    display: inline-block;
+    font-weight: 500;
+    width: 100px;
+  }
+
+  &__management {
+    border-top: 1px solid $border;
+    padding: 40px 0 0 30px;
+    font-size: 0;
+  }
+
+  &__manager {
+    display: inline-block;
+    width: 50%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    svg {
+      width: 20px;
+      height: 21px;
+    }
+
+  }
+
+  &__map {
+    height: 550px;
+  }
+
+  @include media(1199) {
+    &__inner {
+      padding: 30px 0;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__block {
+      padding: 0;
+    }
+
+    &__management {
+      padding: 40px 0 0 0;
+    }
+
+    &__manager {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__map {
+      height: 350px;
+    }
+  }
+
+  @include media(767) {
+    &__map {
+      height: 320px;
+    }
+  }
+
+
+}

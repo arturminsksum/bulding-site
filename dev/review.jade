@@ -1,0 +1,29 @@
+extends template
+block content
+  main.reviews
+    .container
+      +breadcrumb(['Частному клиенту','Отзывы'])
+    .b-content
+      .container
+        section
+          .page__title Отзывы
+          .page__text Вводный текст. Металлические фасадные панели все более востребованы  в современном дизайне  и архитектуре. Наиболее активно панели применяются для облицовки офисных зданий, зданий общественного назначения, производственных и складских помещений, при реконструкции фасадов, для отделки частных домов.
+          .reviews-group.js-reviews-group
+            - for (var i = 0; i < 12; i++)
+              .reviews-group__item
+                - for (var j = 0; j < 3; j++)
+                    .view
+                      a.view__img.js-fancybox(href="img/main-review-slider-big.jpg")
+                        img(src="img/main-review-slider.jpg", alt="")
+                      .view__info
+                        a(href="").view__title "Стройтрест 4"
+                        .view__city Минск              
+          .reviews-group__btn 
+            .btn.btn_grey.js-reviews-more Показать ещё
+          
+
+
+    +b-contacts()
+
+    +b-map()
+      

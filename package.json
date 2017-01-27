@@ -1,0 +1,24 @@
+{
+  "name": "pinskdrev",
+  "description": "default folder structure",
+  "version": "0.1.0",
+  "author": "Artur",
+  "repository": "",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-connect": "*",
+    "gulp-cssnano": "*",
+    "gulp-error-notifier": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-strip-css-comments": "*",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "*"
+  }
+}

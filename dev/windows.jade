@@ -1,0 +1,152 @@
+extends template
+block content
+  main.windows
+    .container
+      +breadcrumb(['Продукция','Окна'])
+    .b-content
+      .container
+        .b-content__left
+          +sidebar('Окна', 'windows')
+        .b-content__right  
+          section.windows-banner
+            .windows-banner__list.js-slider
+              .windows-banner__item(style="background-image: url(img/windows-slider-01.jpg)")
+                .windows-banner__info
+                  h1.windows-banner__title Окна
+                  .windows-banner__text Пару слов о преимуществах сотрудничества с компанией по данному направлению
+              .windows-banner__item(style="background-image: url(img/windows-slider-02.jpg)")
+                .windows-banner__info
+                  h1.windows-banner__title Окна
+                  .windows-banner__text Пару слов о преимуществах сотрудничества с компанией по данному направлению
+              .windows-banner__item(style="background-image: url(img/windows-slider-03.jpg)")
+                .windows-banner__info
+                  h1.windows-banner__title Окна
+                  .windows-banner__text Пару слов о преимуществах сотрудничества с компанией по данному направлению
+            .windows-banner__btn.js-windows-form-open Связаться с нами
+            .windows-banner__form
+              .windows-banner__name Связаться с нами
+              .windows-banner__close.js-windows-form-close
+              form(action="").form          
+                .form__block
+                  input.input#name_windows(data-valid="text" type='text', name='form[]', placeholder='',autocomplete='name')
+                  label.label(for="name_windows") Имя*
+                .form__block
+                  input.input#phone_windows(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
+                  label.label(for="phone_windows") Телефон*                
+                .form__block
+                  input.input#email_windows(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
+                  label.label(for="email_windows") E-mail*
+                .form__block.form__block_windows
+                  label.label(for="message_windows") Комментарий
+                  textarea.textarea#message_windows(data-valid="text" name='form[]', rows='5', placeholder='')
+                .form__btn
+                  button.btn.btn_blue(type='submit') Отправить                 
+
+          section.window-info
+            .b-text 
+              p  
+                span Как правило, окна, после длительной эксплуатации, являются основным источником теплопотерь. Изготовление теплых алюминиевых окон, которые зимой сохраняют тепло  в вашем доме или здании, будут выгодным приобретением, так как можно существенно сэкономить на отоплении.
+                br
+                span Окна из алюминиевого профиля отличаются не только функциональностью  и эстетикой, но и  существенными преимуществами  в сравнении  с другими материалами:
+              ul 
+                li Срок эксплуатации алюминиевых окон намного больше , чем у деревянных и пластиковых – не менее 40лет.
+                li Выдерживают температуру  - от -80ºС до +100 ºС, не деформируются  при перепаду температур и влажности
+                li Окно из алюминиевого профиля  в 3 раза прочнее пластикового и  в 40 раз  - деревянного, что позволяет создавать конструкции любой формы  и размера.
+                li Высокая безопасность самого материала – алюминий относится  в негорючим материалам
+                li Профиль может быть окрашен в любые  цвета из палитры Ral, возможно имитировать и деревянную поверхность. Использование разноцветных пленок придают стелу любой цвет.
+            .window-info__square
+              a(href="").square
+                .square__img
+                  img(src="img/windows-square-01.jpg", alt="")                    
+                .square__info
+                  .square__title "Холодный" профиль
+
+              a(href="").square
+                .square__img
+                  img(src="img/windows-square-02.jpg", alt="")                    
+                .square__info
+                  .square__title "Теплый" профиль             
+
+            .b-text 
+              p  
+                span Мы предлагаем алюминиевые окна следующих типов открывания: поворотные, поворотно-откидные, верхнеподвесные, нижнеподвесные с открыванием внутрь, - а также витрины для любых административных и общественных зданий.
+            .window-info__type
+              .row
+                each val, index in ['Поворотно-откидное','Поворотное','Откидное','Верхне-подвесное','Поворотное','С вращающейся створкой','Двухстворчатое окно','Откидное (фрамужное) окно']
+                  .three.columns
+                    .type
+                      if index===0
+                        .type__title.js-accordian-toggle.active=val
+                        .type__img.js-accordian-inner(style="display: block;") 
+                          img(src="img/window-0"+(index+1)+".jpg", alt="")
+                      else 
+                        .type__title.js-accordian-toggle=val                        
+                        .type__img.js-accordian-inner
+                          img(src="img/window-0"+(index+1)+".jpg", alt="")                      
+            .b-dotted-big
+              .b-dotted-big__txt
+                p 
+                  strong В нашем салоне по адресу, г. Минск, ул Сурганова, 61, 27-7 можно посмотреть образец раздвижной алюминиевой двери из профиля Schuco серии CP 155, образцы других видов профиля и его окраски, получить консультации специалиста.
+
+            .window-info__partners
+              .b-text
+                p  
+                  span Чтобы окна из алюминия  в полной мере соответствовали вашим потребностям, мы используем лучшие системы алюминиевых профилей и только качественную фурнитуру. Наше производство оснащено современным оборудованием,  а качество  выпускаемых изделий  и проведение монтажных работ  соответствуют требованиям СТБ, ГОСТ.
+
+                p  
+                  span Мы возьмем на себя все работы по замерам, проектированию, инженерным расчетам, доставке и монтажу алюминиевых окон по  Минску  и   в любой точке Республики Беларусь. Наши специалисты спроектируют узлы примыкания алюминиевой конструкции к фасаду существующих сооружений, каждый элемент сложной конструкции будет идеально соответствовать заданным параметрам.
+
+
+              .partners
+                .partners__title Наши партнёры
+                .partners__img
+                  img(src="img/partners-01.jpg", alt="")
+                .partners__img
+                  img(src="img/partners-02.jpg", alt="")
+                .partners__img
+                  img(src="img/partners-03.jpg", alt="")
+                .partners__img
+                  img(src="img/partners-04.jpg", alt="")
+                                                        
+            .b-dotted
+              .b-dotted__txt
+                p 
+                  span Заказать окна из алюминиевого профиля можно  в салоне компании «ФастБилдинг», по адресу, г. Минск, ул. Сурганова, 61, 27-7 
+                  br
+                  span или по тел. <a href="tel:+375 17 247 50 03">+375 17 <strong>247 50 03</strong></a>,  <a href="tel:+375 29 363 07 68">+375 29  <strong>363 07 68</strong></a>
+
+            .window-info__watch
+              .watch
+                .watch__pre Образцы проектов
+                .watch__title Вдохновляющие примеры для Вашего дома
+                .watch__text Окна, входные двери, зимние сады и балконы. Откройте для себя многообразие продукции Schüco.
+                .watch__btn 
+                  a(href="").btn.btn_invert Смотреть примеры
+
+
+
+    +b-contacts()
+
+    +b-map()
+      
+
+    #windows.popup
+      .popup__close.js-fancy-close
+      .popup__title Связаться с нами 
+      .popup__form
+        form(action="").form          
+          .form__block
+            input.input#name_windows(data-valid="name" type='text', name='form[]', placeholder='',autocomplete='name')
+            label.label(for="name_windows") Имя*
+          .form__block
+            input.input#phone_windows(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
+            label.label(for="phone_windows") Телефон*                
+          .form__block
+            input.input#email_windows(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
+            label.label(for="email_windows") E-mail*
+          .form__block.form__block_windows
+            label.label(for="message_windows") Комментарий
+            textarea.textarea#message_windows(data-valid="text" name='form[]', rows='5', placeholder='')
+          .form__btn
+            button.btn.btn_blue(type='submit') Отправить    
+                

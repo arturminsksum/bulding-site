@@ -1,0 +1,194 @@
+.gallery {
+  &__tabs {
+    .tabs {
+      &__btn {
+        width: 33.3%;
+      }
+
+    }
+
+  }
+
+  &__item {
+    position: relative;
+    padding: 15px;
+    display: inline-block;
+
+    &_big {
+      width: 66.6%;
+    }
+
+    &_small {
+      width: 33.3%;
+    }
+
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+    }
+
+  }
+
+  &__info {
+    position: absolute;
+    padding: 5px 10px;
+    max-width: 290px;
+    top: 30px;
+    left: 15px;
+    background-color: rgba(255, 255, 255, 0.902);
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  &__city {
+    font-size: 14px;
+    color: $dark-grey;
+  }
+
+  .tabs {
+    &__btn {
+      width: 33.3%;
+
+      br {
+        display: none;
+      }
+
+    }
+
+    &__content {
+      font-size: 0;
+      margin: 0 -15px 15px;
+    }
+
+  }
+
+  @include media(1199) {
+    &__item {
+      padding: 5px;
+    }
+
+    &__info {
+      position: absolute;
+      padding: 5px 10px;
+      max-width: 220px;
+      top: 20px;
+      left: 5px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    .tabs {
+      &__content {
+        margin: 0 -5px 15px;
+      }
+
+    }
+
+  }
+
+  @include media(767) {
+    .tabs {
+      &__pagin {
+        margin: 0 -15px;
+      }
+
+      &__btn {
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 30%;
+        }
+
+        &:nth-child(3) {
+          width: 40%;
+        }
+
+        br {
+          display: block;
+        }
+
+      }
+
+      &__content {
+        text-align: center;
+      }
+
+    }
+
+    &__item {
+      &_big {
+        width: auto;
+      }
+
+      &_small {
+        width: auto;
+      }
+
+    }
+
+  }
+
+}
+
+.tabs {
+  &__sort {
+    position: relative;
+    font-size: 0;
+    margin: 30px -5px;
+
+    .slick-prev {
+      left: -10px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+
+      &:before {
+        background-image: $tabs-arrow-left;
+      }
+
+    }
+
+    .slick-next {
+      right: -10px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+
+      &:before {
+        background-image: $tabs-arrow-right;
+      }
+
+    }
+
+  }
+
+  &__type {
+    display: inline-block;
+    padding: 9px 20px;
+    border-width: 2px;
+    border-color: rgb(221, 221, 221);
+    border-style: solid;
+    font-size: 15px;
+    color: rgb(164, 164, 164);
+    margin: 0 5px;
+    cursor: pointer;
+    @include trans('border-color, color');
+
+    &:hover,
+    &.active {
+      border-color: rgb(46, 66, 84);
+      color: rgb(0, 0, 0);
+    }
+
+  }
+
+  &__more {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+}

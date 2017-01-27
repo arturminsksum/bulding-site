@@ -1,0 +1,184 @@
+mixin header(o)
+
+    header.header
+      .container
+        .overlay.overlay_menu
+        .top-menu__close  
+        .header-top
+          .header-top__left
+            +toggle()
+            .header-top__logo
+              .logo
+                img(src="svg/logo.svg", alt="")
+            .header-top__phone
+              .phone
+                .phone__title Телефон в Минске:
+                a(href="tel:+375172475003").phone__number
+                  span.phone__code + 375 17 
+                  span.phone__num 247 50 03
+          .header-top__right        
+            .header-top__menu
+              .top-menu__title.js-toggle Меню
+              ul.top-menu
+                li.top-menu__item
+                  a(href="").top-menu__link О компании
+                li.top-menu__item
+                  a(href="").top-menu__link Галерея
+                li.top-menu__item
+                  a(href="").top-menu__link Контакты
+              .mobile-phone
+                .phone__title Телефон в Минске:
+                a(href="tel:+375172475003").phone__number
+                  span.phone__code + 375 17 
+                  span.phone__num 247 50 03
+              .mobile-callback
+                a(href="#call").btn.btn_red.js-popup Заказать обратный звонок              
+            .header-top__search
+              .search
+                .search__icon
+                .search__block
+                  .search__close
+                  form.search__form(action="")
+                    input.search__input(type="text" placeholder="Поиск по сайту")
+                    input.search__submit(type="submit")
+            .header-top__callback
+              a(href="#call").btn.btn_red.js-popup Заказать обратный звонок
+      .header-bottom
+        .menu
+          .menu__item.menu__item_left.js-menu-item-active
+            .menu__link Частному клиенту
+            .sub-menu
+              .container.js-sub-menu
+                .sub-menu__item.sub-menu__item_drop
+                  a.sub-menu__link.sub-menu__link_drop(href="") Продукция
+                  .sub-menu__drop
+                    .container
+                      .drop-menu
+                        .row
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Окна
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Развижные двери
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Вентилируемый фасад
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              ul.drop-menu__list.drop-menu__list_mt      
+                                li.drop-menu__li 
+                                  a(href="") Вентилируемый фасад                                                         
+                .sub-menu__item.sub-menu__item_drop
+                  a.sub-menu__link.sub-menu__link_drop(href="") Образцы проектов
+                  .sub-menu__drop
+                    .container
+                      .drop-menu
+                        .row
+                          .four.columns
+                            .drop-menu__item
+                              .drop-menu__title Окна
+                              .drop-menu__text Ознакомьтесь с впечатляющими примерами реализованных проектов
+                              a(href="").drop-menu__link Подробнее >
+                          .four.columns
+                            .drop-menu__item
+                              ul.drop-menu__list
+                                li.drop-menu__li 
+                                  a(href="") Окна
+                                li.drop-menu__li 
+                                  a(href="") Раздвижные двери    
+                                li.drop-menu__li 
+                                  a(href="") Зимние сады, террасы         
+                                li.drop-menu__li 
+                                  a(href="") Вентилируемый фасад         
+                          .four.columns
+                            .drop-menu__item
+                              .drop-menu__title Вентилируемый фасад
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              .drop-menu__type Жилой дом    
+                              a(href="").drop-menu__link Подробнее >
+
+                .sub-menu__item
+                  a.sub-menu__link(href="") Материалы для скачивания
+                .sub-menu__item
+                  a.sub-menu__link(href="") Контакты
+
+          .menu__item.menu__item_right
+            .menu__link Юридическим лицам
+            .sub-menu
+              .container.js-sub-menu
+                .sub-menu__item.sub-menu__item_drop
+                  a.sub-menu__link.sub-menu__link_drop(href="") Продукция
+                  .sub-menu__drop
+                    .container
+                      .drop-menu
+                        .row
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Окна
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Развижные двери
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              .drop-menu__title Вентилируемый фасад
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              a(href="").drop-menu__link Подробнее >
+                          .three.columns
+                            .drop-menu__item
+                              ul.drop-menu__list.drop-menu__list_mt      
+                                li.drop-menu__li 
+                                  a(href="") Вентилируемый фасад                                                         
+                .sub-menu__item.sub-menu__item_drop
+                  a.sub-menu__link.sub-menu__link_drop(href="") Образцы проектов
+                  .sub-menu__drop
+                    .container
+                      .drop-menu
+                        .row
+                          .four.columns
+                            .drop-menu__item
+                              .drop-menu__title Окна
+                              .drop-menu__text Ознакомьтесь с впечатляющими примерами реализованных проектов
+                              a(href="").drop-menu__link Подробнее >
+                          .four.columns
+                            .drop-menu__item
+                              ul.drop-menu__list
+                                li.drop-menu__li 
+                                  a(href="") Окна
+                                li.drop-menu__li 
+                                  a(href="") Раздвижные двери    
+                                li.drop-menu__li 
+                                  a(href="") Зимние сады, террасы         
+                                li.drop-menu__li 
+                                  a(href="") Вентилируемый фасад         
+                          .four.columns
+                            .drop-menu__item
+                              .drop-menu__title Вентилируемый фасад
+                              a(href="").drop-menu__img
+                                img(src="img/drop-01.jpg", alt="")
+                              .drop-menu__type Жилой дом    
+                              a(href="").drop-menu__link Подробнее >
+
+                .sub-menu__item
+                  a.sub-menu__link(href="") Материалы для скачивания
+                .sub-menu__item
+                  a.sub-menu__link(href="") Контакты           
+
+  

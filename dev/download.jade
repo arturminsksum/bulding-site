@@ -1,0 +1,66 @@
+extends template
+block content
+  main.download
+    .container
+      +breadcrumb(['Частному клиенту','Материалы для скачивания'])
+    .b-content
+      .container
+        section
+          .page__title Материалы для скачивания
+          .page__text Вводный текст. Металлические фасадные панели все более востребованы  в современном дизайне  и архитектуре. Наиболее активно панели применяются для облицовки офисных зданий, зданий общественного назначения, производственных и складских помещений, при реконструкции фасадов, для отделки частных домов.
+
+          .block__title Выбрать раздел продукции
+          .download__accordion
+            .accordion
+              
+              .item.opened
+                .item__title Окна
+                .item__info(style="display:block")
+                  .row
+                    .six.columns
+                      .document
+                        .document__left
+                          img(src="img/pdf.png", alt="")
+                        .document__right
+                          .document__title Алюминий
+                          .document__text Новый уровень жилого комфорта благодаря алюминиевым оконным системам
+                          a(href="files/pdf.pdf" target="_blank").document__link Скачать. Алюминий.pdf (3 мб.)
+                    .six.columns
+                      .document
+                        .document__left
+                          img(src="img/pdf.png", alt="")
+                        .document__right
+                          .document__title Алюминий
+                          .document__text Новый уровень жилого комфорта благодаря алюминиевым оконным системам
+                          a(href="files/pdf.pdf" target="_blank").document__link Скачать. Алюминий.pdf (3 мб.)
+
+
+              each item in ['Двери', 'Вентилируемый фасад','Фасадное остекление','Алюминиевые витражи']
+                .item
+                  .item__title=item
+                  .item__info
+                    .row
+                      .six.columns
+                        .document
+                          .document__left
+                            img(src="img/pdf.png", alt="")
+                          .document__right
+                            .document__title Алюминий
+                            .document__text Новый уровень жилого комфорта благодаря алюминиевым оконным системам
+                            a(href="files/pdf.pdf" target="_blank").document__link Скачать. Алюминий.pdf (3 мб.)
+                      .six.columns
+                        .document
+                          .document__left
+                            img(src="img/pdf.png", alt="")
+                          .document__right
+                            .document__title Алюминий
+                            .document__text Новый уровень жилого комфорта благодаря алюминиевым оконным системам
+                            a(href="files/pdf.pdf" target="_blank").document__link Скачать. Алюминий.pdf (3 мб.)
+
+   
+
+
+    +b-contacts()
+
+    +b-map()
+      

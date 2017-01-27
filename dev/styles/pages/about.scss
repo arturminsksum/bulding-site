@@ -1,0 +1,99 @@
+.about-baner {
+  margin-bottom: 50px;
+
+  &__img {
+    position: relative;
+    padding-right: 33%;
+
+    img {
+      max-width: 100%;
+    }
+
+  }
+
+  &__quote {
+    position: absolute;
+    width: 33%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    @extend %vertical-align;
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 60px;
+    color: $grey;
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 25px;
+      width: 34px;
+      height: 35px;
+      @include bgi('quote');
+    }
+
+  }
+
+  @include media(1199) {
+    &__text {
+      font-size: 16px;
+
+      &:before {
+        top: -40px;
+        width: 28px;
+        height: 29px;
+      }
+
+    }
+
+
+
+  }
+
+  @include media(767) {
+
+  &__img {
+    padding-right: 0;
+  }
+
+  &__quote {
+    position: static;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &__text {
+    padding-left: 40px;
+    margin-top: 50px;
+      &:before {
+        top: -30px;
+        left: 10px;
+        width: 23px;
+        height: 23px;
+      }
+
+
+
+  }
+
+
+
+
+  }
+
+}
+
+.about__text {
+  margin-bottom: 50px;
+
+  @include media(1199) {
+    margin-bottom: 30px;
+  }
+
+}

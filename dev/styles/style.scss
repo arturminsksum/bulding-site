@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import "variables/reset.scss";
+@import "variables/svg.scss";
+@import "variables/variables.scss";
+@import "variables/skeleton.scss";
+@import "variables/fonts.scss";
+@import "variables/slick.scss";
+@import "variables/easydropdown.scss";
+@import "variables/jquery.fancybox.scss";
+@import "variables/animate.scss";
+
+@import "../jade/jade.scss";
+
+@import "pages/main.scss";
+@import "pages/windows.scss";
+@import "pages/fasad.scss";
+@import "pages/gallery.scss";
+@import "pages/download.scss";
+@import "pages/reviews.scss";
+@import "pages/about.scss";
+@import "pages/news.scss";
+@import "pages/contacts.scss";

@@ -1,0 +1,279 @@
+extends template
+block content
+  main.main
+
+    .main-slider
+      .main-slider__list.js-slider
+        .main-slider__item(style="background-image: url(img/main-slider-01.jpg)")
+          .main-slider__info
+            .main-slider__square
+            .main-slider__title Алюминиевые системы <br>остекления  и вентилируемые <br>фасады
+        .main-slider__item(style="background-image: url(img/main-slider-02.jpg)")
+          .main-slider__info
+            .main-slider__square
+            .main-slider__title Алюминиевые системы <br>остекления
+        .main-slider__item(style="background-image: url(img/main-slider-03.jpg)")
+          .main-slider__info
+            .main-slider__square
+            .main-slider__title Вентилируемые <br>фасады
+
+    section.main-product
+      .container
+        .main-product__row.main-product__row_first
+          .main-product__col
+            .main-info
+              .main-info__block
+                .section__title Вентилируемые <br>фасады
+                .main-info__text
+                  p Универсальный способ утепления и облицовки здания. Мы производим имонтируем комплектующие  системы вентилируемых  фасадов
+                a(href="").main-info__link Подробнее
+              .main-info__btn
+                .main-info__col
+                  .btn.btn_blue.js-scroll-form Записаться на консультацию
+                .main-info__col  
+                  a.btn.btn_blue(href="") Смотреть портфолио
+          .main-product__col
+            .main-group
+              .main-group__square
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-01.jpg", alt="")                    
+                  .square__info
+                    .square__title Панели <br>фасадные
+                    .square__text 
+                      p Разнообразие вариантов и неповторимый стиль
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-02.jpg", alt="")                    
+                  .square__info
+                    .square__title Керамогранит
+                    .square__text 
+                      p Совершенство формы, гарантия качества      
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-03.jpg", alt="")                    
+                  .square__info
+                    .square__title Натуральный <br>камень
+                    .square__text 
+                      p Разнообразие вариантов и неповторимый стиль
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-04.jpg", alt="")                    
+                  .square__info
+                    .square__title Подконструкция
+                    .square__text 
+                      p Прочность и надежность                       
+
+        .main-product__row.main-product__row_second
+          .main-product__col.main-product__col_first
+            .main-group
+              .main-group__square
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-05.jpg", alt="")                    
+                  .square__info
+                    .square__title Окна и двери из <br>алюминиевого <br>профиля
+                    .square__text 
+                      p Энергоэффективность и легкость в обращении
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-06.jpg", alt="")                    
+                  .square__info
+                    .square__title Алюминиевые <br>витражи
+                    .square__text 
+                      p Совершенство формы, гарантия качества      
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-07.jpg", alt="")                    
+                  .square__info
+                    .square__title Зенитные <br> фонари
+                    .square__text 
+                      p Индивидуально для вашего дома
+                a(href="").square
+                  .square__img
+                    img(src="img/main-square-08.jpg", alt="")                    
+                  .square__info
+                    .square__title Зимние сады <br>и террасы
+                    .square__text 
+                      p Эстетика и функциональность             
+          .main-product__col.main-product__col_second
+            .main-info
+              .main-info__block
+                .section__title Алюминиевые <br>системы <br>остекления
+                .main-info__text
+                  p Собственное производство изделий из алюминиевого профиля - окна и  двери, фасадные и интерьерные конструкции
+                a(href="").main-info__link Подробнее
+              .main-info__btn
+                .main-info__col
+                  .btn.btn_blue.js-scroll-form Записаться на консультацию
+                .main-info__col  
+                  a.btn.btn_blue(href="") Смотреть портфолио
+
+    section.main-show
+      .main-show__row
+        .main-show__col
+          .main-showroom
+            .main-showroom__block
+              .main-showroom__title Собственный Шоурум
+              .main-showroom__text
+                p В нашем салоне по адресу, г. Минск, ул Сурганова, 61, 27-7 можно посмотреть образец раздвижной алюминиевой двери из профиля Schuco серии CP 155, образцы других видов профиля и его окраски, получить консультации специалиста. У нас Вы сможете выбрать качественную фурнитуру, стекло и все комплектующие для остекления вашего дома. 
+        .main-show__col
+          .main-form
+            .main-form__block
+              form(action="").form
+                .main-form__title Запишитесь и приходите
+                .form__block
+                  input.input#name_main(data-valid="name" type='text', name='form[]', placeholder='',autocomplete='name')
+                  label.label(for="name_main") Имя*
+                .form__block
+                  input.input#phone_main(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
+                  label.label(for="phone_main") Телефон*                
+                .form__block
+                  input.input#email_main(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
+                  label.label(for="email_main") E-mail*
+                .main-form__btn
+                  button.btn.btn_invert(type='submit') Записаться           
+
+    section.main-feature
+      .container
+        .section__title Наши преимущества
+        .row.js-slider-feature
+          .four.columns
+            .feature
+              .feature__img
+                img(src="svg/feature-01.svg", alt="")
+              .feature__title Собственное производство – гарантия качества
+              .feature__text Производственные площади составляют более 1000 кв.м, где располагается 20 единиц оборудования для производства комплектующих  вентилируемых фасадов  и систем остекления из алюминиевого профиля  по передовым европейским технологиям
+          .four.columns
+            .feature
+              .feature__img
+                img(src="svg/feature-02.svg", alt="")
+              .feature__title Контроль качества
+              .feature__text Современное оборудование, которым осКачество всех выпускаемых изделий подтверждено Сертификатами о соответствии. Предприятие сертифицировано на соответствие системе менеджмента качества СТБ ISO 9001-2015
+          .four.columns
+            .feature
+              .feature__img
+                img(src="svg/feature-03.svg", alt="")
+              .feature__title Собственный ШОУРУМ
+              .feature__text Приходите  к нам по адресу ул. Сурганова, 61, 27-7  и оцените качество нашей продукции!
+
+
+    section.main-example
+      .container
+        .section__title Наши преимущества
+        .main-example__tabs
+          .tabs
+            .tabs__pagin
+              .tabs__btn.js-tabs__btn
+                .tabs__txt 
+                  span Частному клиенту
+              .tabs__btn.js-tabs__btn 
+                .tabs__txt 
+                  span Юридическим лицам
+            .tabs__content
+              .tabs__item.js-tabs__item
+
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-01.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Аквапарк
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-02.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Здание Октябрьского районного комиссариата, ул. Казинца
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-03.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Учебный корпус МИТСО
+                    .example__text город Минск улица Казинца 
+
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-04.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Городская больница 2
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-05.jpg", alt="")                    
+                  .example__info                    
+                    .example__title ОАО Рогачевский МКК
+                    .example__text Город Рогачёв
+                a(href="").example
+                  .example__img
+                    .example__result
+                      .example__amount 134
+                      .example__object Обекта
+                      .example__term Успешно сдано в 2014-2016 годах Минск                                   
+                  .example__info
+                    .example__all
+                      span Смотреть все
+
+              .tabs__item.js-tabs__item        
+
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-01.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Аквапарк
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-02.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Здание Октябрьского районного комиссариата, ул. Казинца
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-03.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Учебный корпус МИТСО
+                    .example__text город Минск улица Казинца 
+
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-04.jpg", alt="")                    
+                  .example__info                    
+                    .example__title Городская больница 2
+                    .example__text Город Минск
+                a(href="").example
+                  .example__img
+                    img(src="img/main-example-05.jpg", alt="")                    
+                  .example__info                    
+                    .example__title ОАО Рогачевский МКК
+                    .example__text Город Рогачёв
+                a(href="").example
+                  .example__img
+                    .example__result
+                      .example__amount 134
+                      .example__object Обекта
+                      .example__term Успешно сдано в 2014-2016 годах Минск                                   
+                  .example__info
+                    .example__all
+                      span Смотреть все
+
+    section.main-review
+      .container
+        .main-review__title Отзывы
+        .main-review__slider.js-review-slider
+          - for (var i = 0; i < 10; i++)
+            .main-review__item
+              .review
+                a.review__img.js-fancybox(href="img/main-review-slider-big.jpg")
+                  img(src="img/main-review-slider.jpg", alt="")
+                .review__info
+                  a(href="").review__title "Стройтрест 4"
+                  .review__city Минск
+
+    +b-contacts()
+
+    +b-map()
+      
+
+
+                

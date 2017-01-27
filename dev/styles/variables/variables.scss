@@ -1,0 +1,211 @@
+// colors
+$dark-grey: #414141;
+$grey: #787878;
+$light-grey: #eeeded;
+$pink: #ff8282;
+$red: #fe5858;
+$light-blue: #2bbfc9;
+$dark-blue: #2e4254;
+$mad-blue: #4f677c;
+$border: #dddddd;
+$border-bottom: #dfdfdf;
+$shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+@mixin media($width) {
+  @media (max-width:$width + px) {
+    @content;
+  }
+
+}
+
+@mixin bgi($url) {
+  background-image: url("../img/#{$url}.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin trans($params) {
+  transition: #{$params} 0.3s;
+}
+
+@mixin hover($border-color:#000) {
+  &:hover {
+    border-bottom: 1px solid $border-color;
+    transition: border 0.3s;
+  }
+}
+
+
+%vertical-align {
+  font-size: 0;
+  &:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+
+}
+
+%justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+}
+
+%close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 6px;
+      width: 18px;
+      transform: rotate(-45deg);
+      border-bottom: 2px solid $pink;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 6px;
+      width: 18px;
+      transform: rotate(45deg);
+      border-bottom: 2px solid $pink;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        border-bottom-color: $red;
+      }
+
+    }
+}
+
+
+@mixin arr($width, $height, $bg, $direction) {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+
+  @if $direction == t {
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px;
+    border-color: transparent transparent $bg transparent;
+  }
+
+  @if $direction == r {
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+
+  @if $direction == b {
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px;
+    border-color: $bg transparent transparent transparent;
+  }
+
+  @if $direction == l {
+    border-width: $height / 2 + px $width + px $height / 2 + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+
+  @if $direction == tl {
+    border-width: $height + px $width + px 0 0;
+    border-color: $bg transparent transparent transparent;
+  }
+
+  @if $direction == tr {
+    border-width: 0 $width + px $height + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+
+  @if $direction == br {
+    border-width: 0 0 $height + px $width + px;
+    border-color: transparent transparent $bg transparent;
+  }
+
+  @if $direction == bl {
+    border-width: $height + px 0 0 $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+
+}
+
+.page {
+  &__title {
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: $dark-grey;
+    margin-bottom: 20px;
+  }
+   @include media(1199) {
+    &__title {
+      font-size: 42px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }  
+
+   }
+   @include media(767) {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }  
+
+   }
+
+}
+
+.block {
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+   @include media(1199) {
+    &__title {
+      font-size: 18px;
+    }
+
+   }  
+   @include media(767) {
+    &__title {
+      font-size: 16px;
+    }
+
+   }  
+
+}

@@ -1,0 +1,14 @@
+mixin breadcrumb(arr)
+
+  .breadcrumb
+      ol
+        li
+          a(href='#') Главная        
+        each val, index in arr
+          if index===(arr.length-1)
+            li.active=val   
+          else       
+            li
+              a(href='#')=val
+
+

@@ -1,0 +1,161 @@
+.sidebar {
+	position: relative;
+
+	&_windows {
+		padding-top: 550px;
+	}
+
+	&__btn {
+		display: none;
+	}
+
+	&__menu {
+	}
+
+	@include media(1199) {
+		padding-top: 0;
+		padding-bottom: 30px;
+
+		&__btn {
+			position: relative;
+			display: block;
+			border-style: solid;
+			border-width: 1px;
+			border-color: $border-bottom;
+			height: 50px;
+			line-height: 48px;
+			font-size: 20px;
+			font-weight: 300;
+			padding: 0 50px 0 20px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-image: $arrow-down;
+				top: 10px;
+				right: 10px;
+			}
+
+		}
+
+		&__menu {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #fff;
+			padding: 15px;
+			z-index: 9999;
+		}
+
+	}
+
+}
+
+.side-menu {
+	&__item {
+		position: relative;
+		margin-top: -1px;
+		border-style: solid;
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+		border-color: $border-bottom;
+		&.opened {
+			.side-menu__arr {
+				background-image: $arrow-up;				
+			}
+		}
+	}
+
+		&__arr {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: $arrow-down;
+			top: 29px;
+			right: 0;
+			cursor: pointer;
+		}
+
+	&__link {
+		display: inline-block;
+		margin: 30px 0;
+		font-size: 20px;
+		font-weight: 300;
+
+		&:hover {
+			text-decoration: underline;
+			color: $dark-blue;
+		}
+
+	}
+
+	&__close {
+		display: none;
+		background-color: #fff;
+		top: -40px;
+    right: 0px;
+
+		@extend %close;
+	}	
+
+	@include media(1199) {
+		&__close {
+			display: block;
+		}
+		&__item {
+
+
+			&:first-child {
+				border-top-width: 0;
+
+				.side-menu__arr {
+					top: 0;
+				}
+				.side-menu__link {
+					margin-top: 0;
+				}
+
+			}
+
+		}
+
+		&__arr {
+			top: 19px;
+		}
+
+		&__link {
+			margin: 20px 0;
+		}
+
+	}
+
+}
+
+.side-submenu {
+	&__item {
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 400;
+		color: $dark-grey;
+		margin-bottom: 20px;
+
+		&:hover {
+			text-decoration: underline;
+			color: $dark-blue;
+		}
+
+	}
+
+}

@@ -1,0 +1,74 @@
+extends template
+block content
+  main.gallery
+    .container
+      +breadcrumb(['Продукция','Вентилируемый фасад','Панели фасадные'])
+    .b-content
+      .container
+        section
+          .page__title Образцы проектов
+          .gallery__tabs
+            .tabs
+              .tabs__pagin
+                .tabs__btn.js-gallery-sort.active(data-pagin="all")
+                  .tabs__txt 
+                    span Все <br>проекты
+                .tabs__btn.js-gallery-sort(data-pagin="private")
+                  .tabs__txt 
+                    span Частному клиенту
+                .tabs__btn.js-gallery-sort(data-pagin="legal")
+                  .tabs__txt 
+                    span Юридическим лицам      
+              .tabs__sort.js-tabs__sort
+                each item, type in {'windows':'Окна','doors':'Раздвижные двери','groups':'Входные группы','fasade':'Вентилируемый фасад','lanterns':'Зенитные фонари','glass':'Флюминиевые витражи'}
+                  .tabs__type.js-gallery-sort(data-pagin=type)
+                    span=item
+              .tabs__content
+                each item, index in ['Аквапарк','Здание Октябрьского комиссариата, ул. Казинца','Учебный корпус МИТСО','OAO Рогачевский МКК','Городская больгица 2','Аквапарк','Здание Октябрьского комиссариата, ул. Казинца','Учебный корпус МИТСО','Аквапарк','OAO Рогачевский МКК'] 
+                  if index===4 || index===5                 
+                    .gallery__item.gallery__item_big
+                      .gallery__img
+                        img(src="img/gallery-item-0"+(index+1)+".jpg", alt="")
+                      .gallery__info                     
+                        .gallery__title
+                          span=item
+                        .gallery__city
+                          span Город Минск
+                  else
+                    .gallery__item.gallery__item_small
+                      .gallery__img
+                        img(src="img/gallery-item-0"+(index+1)+".jpg", alt="")
+                      .gallery__info                     
+                        .gallery__title
+                          span=item
+                        .gallery__city
+                          span Город Минск
+              .tabs__more
+                .btn.btn_blue.js-gallery-more Показать еще          
+
+
+    +b-contacts()
+
+    +b-map()
+      
+
+    #windows.popup
+      .popup__close.js-fancy-close
+      .popup__title Связаться с нами 
+      .popup__form
+        form(action="").form          
+          .form__block
+            input.input#name_windows(data-valid="name" type='text', name='form[]', placeholder='',autocomplete='name')
+            label.label(for="name_windows") Имя*
+          .form__block
+            input.input#phone_windows(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
+            label.label(for="phone_windows") Телефон*                
+          .form__block
+            input.input#email_windows(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
+            label.label(for="email_windows") E-mail*
+          .form__block.form__block_windows
+            label.label(for="message_windows") Комментарий
+            textarea.textarea#message_windows(data-valid="text" name='form[]', rows='5', placeholder='')
+          .form__btn
+            button.btn.btn_blue(type='submit') Отправить    
+                

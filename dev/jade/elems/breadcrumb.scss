@@ -1,0 +1,42 @@
+.breadcrumb {
+	margin: 0 -15px;
+	padding: 30px 0;
+
+	ol {
+		text-align: left;
+		margin-bottom: 0;
+
+		& > li {
+			display: inline-block;
+		  font-size: 13px;
+  		color: rgb(140, 140, 140);
+  		margin-bottom: 10px;
+			&.active {
+				color: $dark-blue;
+			}
+
+			& + li:before {
+				content: ">";
+				padding: 0 5px;
+				color: $grey;
+			}
+
+			& > a {
+				font-size: 13px;
+				color: $grey;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+	}
+
+	@include media(1199) {
+			margin: 0;
+	}
+
+}
