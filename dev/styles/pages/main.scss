@@ -604,9 +604,9 @@
         content: '';
         position: absolute;
         top: 50%;
-        left: 0;
-        margin-top: -12px;
-        @include arr(15, 24, #fff, r);
+        left: -4px;
+        margin-top: -16px;
+        @include arr(19, 32, #fff, r);
       }
 
     }
@@ -624,9 +624,9 @@
         content: '';
         position: absolute;
         top: 50%;
-        right: 0;
-        margin-top: -12px;
-        @include arr(15, 24, #fff, l);
+        right: -4px;
+        margin-top: -16px;
+        @include arr(19, 32, #fff, l);
       }
 
     }
@@ -695,8 +695,8 @@
 
         &:after {
           left: inherit;
-          right: 0;
-          @include arr(15, 24, #fff, l);
+          right: -4px;
+          @include arr(20, 32, #fff, l);
         }
 
       }
@@ -712,8 +712,8 @@
 
         &:after {
           right: inherit;
-          left: 0;
-          @include arr(15, 24, #fff, r);
+          left: -4px;
+          @include arr(20, 32, #fff, r);
         }
 
       }
@@ -739,8 +739,8 @@
 
         &:after {
           left: inherit;
-          right: 0;
-          @include arr(15, 24, #fff, l);
+          right: -4px;
+          @include arr(20, 32, #fff, l);
         }
 
       }
@@ -767,8 +767,8 @@
 
         &:after {
           right: inherit;
-          left: 0;
-          @include arr(15, 24, #fff, r);
+          left: -4px;
+          @include arr(20, 32, #fff, r);
         }
 
       }

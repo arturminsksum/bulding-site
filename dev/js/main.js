@@ -464,6 +464,8 @@ $(document).ready(function() {
 
         var mapOptions = {
             zoom: zoom,
+            minZoom: 2,
+            maxZoom: 20,
             center: myLatlng,
             scrollwheel: false
         }
@@ -503,6 +505,8 @@ $(document).ready(function() {
 
         var mapOptions = {
             zoom: zoom,
+            minZoom: 2,
+            maxZoom: 20,
             center: myLatlng,
             scrollwheel: false
         }

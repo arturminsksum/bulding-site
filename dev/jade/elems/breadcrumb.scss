@@ -16,7 +16,13 @@
 			}
 
 			& + li:before {
-				content: ">";
+				content:'';
+				 font-size: 20px;
+				display: inline-block;
+				vertical-align: top;
+				width: 16px;
+				height: 16px;
+				background-image: $breadcrumb;
 				padding: 0 5px;
 				color: $grey;
 			}

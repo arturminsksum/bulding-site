@@ -508,6 +508,11 @@
     font-weight: 700;
     color: #000;
 
+    &:after {
+      content: '〉';
+      font-size: 12px;
+    }
+
     &:hover {
       text-decoration: underline;
     }

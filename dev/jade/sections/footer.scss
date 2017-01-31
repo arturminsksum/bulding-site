@@ -296,6 +296,10 @@
 	&.err {
 		border-color: $pink;
 	}
+	&:disabled {
+		background-color: rgb(235, 235, 228);
+		cursor: default;
+	}
 }
 
 .pink {
